@@ -55,9 +55,49 @@
         <li>
             <a href="/storonniysait#fragment">Ссылка на фрагмент стороннего сайта</a>
         </li>
-        
+        <li>
+        <img src="https://www.kubsu.ru/sites/default/files/news/20141012_162228_2.jpg" style="width: 600px" usemap="#kubsu" alt="КубГУ">
+        <map name="kubsu">
+            <area shape="rect" coords="18,292,535,117" href="https://kubsu.ru">
+            <area shape="circle" coords="60,60,40" href="https://kubsu.ru/ru">
+        </map>
+        Здесь ссылки - прямоугольная в районе университета, круглая область в левом вверхнем углу.
+        </li>
+        <li>
+            <a href="">Ссылка с пустым href</a>
+        </li>
+        <li>
+            <a title="Тут нет ссылки">
+                Ссылка без href.
+            </a>
+        </li>
+        <li>
+            <a href="https://kubsu.ru" rel="nofollow">Ссылка по которой запрещен переход поисковикам. </a>
+        </li>
+        <li>
+            <noindex>
+                <a href="https://kubsu.ru">Ссылка с запрещенной индексацией</a>
+            </noindex>
+        </li>
+        <li>
+            Нумерованный список ссылок с title.
+            
+            <ol>
+                <li>
+                <a href="https://kubsu.ru" title="Сайт КубГУ">Наведи и узнай куда ведет ссылка</a>
+                </li>
+                <li>
+                 <a href="https://vk.com/" title="Сайт Вконтакте">Наведи и узнай куда ведет ссылка</a>
+                </li>
+                <li>
+                <a href="https://moodle.kubsu.ru/" title="Сайт Мудл.КубГУ">Наведи и узнай куда ведет ссылка</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="ftp://user:password@fake.com/file.zip">Ссылка ftp c авторизацией(фейк)</a>
+        </li>
         </ul>
-        <h2 id="#form">
+        <h2 id="form">
         Форма.
         </h2>
     </body>
