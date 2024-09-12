@@ -78,9 +78,10 @@
             <a href="https://kubsu.ru" rel="nofollow">Ссылка по которой запрещен переход поисковикам. </a>
         </li>
         <li>
-            <noindex>
+            <!--noindex-->
                 <a href="https://kubsu.ru">Ссылка с запрещенной индексацией</a>
-            </noindex>
+            <!--/noindex-->
+            <!--Валидатор ругался на noindex по совету из интернета заключил его в комментарий-->
             </li>
         <li>
             Нумерованный список ссылок с title.
@@ -103,6 +104,82 @@
         <h2 id="form">
         Форма.
         </h2>
+        <form action="" method="post">
+            <label>
+                Введите ФИО:
+                <br/>
+                <input name="name" placeholder="Иванов Иван Иванович">
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Введите номер телефона:
+                <br/>
+                <input name="number" value="+7" type="tel">
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Введите свою почту:
+                <br/>
+                <input name="email" placeholder="email" type="email">
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Выберите дату:
+                <br/>
+                <input name="date" value="2024-01-01" type="date">
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Ваш пол:
+                <br/>
+                Мужской <input name="radio1" type="radio" value="male" checked="checked">
+                <br/>
+                </label>
+                <label>
+                Женский <input name="radio1" type="radio" value="female" >
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Выберите любимый язык программирования:
+                <br/>
+            <select name="lyubimiy yazik" multiple="multiple">
+                <option value="Pascal">Pascal</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Haskel">Haskel</option>
+                <option value="Clojure">Clojure</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+            </select>
+            </label>
+            <br/>
+            <br/>
+            <label>
+                Введите вашу биографию:
+                <br/>
+                <textarea name="biografy" placeholder="Ваша биография" style="height: 100px;width:400px ;"></textarea>
+            </label>
+            <br/>
+            <br/>
+            <label>
+                <input name="check" type="checkbox" value="Значение 1"> С контрактом ознакомлен(а).
+            </label>
+            <br/>
+            <br/>
+            <label>
+                <input name="save" type="submit" value="Сохранить">
+            </label>
+
+        </form>
     </body>
 </html>
 
