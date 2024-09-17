@@ -1,19 +1,19 @@
-.bodystyle
+#bodystyle
 {
     background-color: #c3e7cc;
     margin: 0;
 }
-.headerstyle
+#headerstyle
 {
         background-color: #58ab8f;
-        width: 100%;
+        width: auto;
         height: 180px;
         padding: 0;
         border-bottom:ridge;
         border-color: black;
 
 }
-.navstyle
+#navstyle
 {
     background-color: #255648;
     margin-left: 60%;
@@ -28,10 +28,10 @@
 .astyle
 {
     color: #ffffff;
-    margin: 10%;
+    margin: 10% ;
     margin-top: 5px;
 }
-.imgstyle
+#imgstyle
 {
     border-radius: 100%;
     width: 100px;
@@ -55,32 +55,33 @@
     border-color: black;
     border-radius: 10px;
 }
-#ssilki
+.ssilki
 {
-    width: 20%;
-    margin-left:40% ;
-    margin-right:40%;
+    
+    text-align: center;
+    margin: 20px;
 }
 #form
 {
-    width: 10%;
-    margin-left:45% ;
-    margin-right:45%;
+   
+    text-align: center;
+    margin: 20px;
 }
 #tablestyle11
 {
 background-color: black;
 width: 100%;
+height: 300px;
 }
-#tablestyle1
+.tablestyle1
 {
 background-color: aquamarine;
 }
-#tablestyle2
+.tablestyle2
 {
 background-color: chartreuse;
 }
-.footerstyle
+#footerstyle
 {
     height: 60px;
     width: auto;
