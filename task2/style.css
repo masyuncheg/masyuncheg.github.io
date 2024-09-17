@@ -1,0 +1,92 @@
+.bodystyle
+{
+    background-color: #c3e7cc;
+    margin: 0;
+}
+.headerstyle
+{
+        background-color: #58ab8f;
+        width: 100%;
+        height: 180px;
+        padding: 0;
+        border-bottom:ridge;
+        border-color: black;
+
+}
+.navstyle
+{
+    background-color: #255648;
+    margin-left: 60%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 20px;
+    border-left: ridge;
+    border-bottom: ridge;
+    border-color: black;
+}
+.astyle
+{
+    color: #ffffff;
+    margin: 10%;
+    margin-top: 5px;
+}
+.imgstyle
+{
+    border-radius: 100%;
+    width: 100px;
+    float: left;
+    margin-left: 75px;
+    margin-top: -20px;
+}
+.h1style
+{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.divstyle1
+{
+    background-color: #1ed25c69;
+    margin-top: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 15px;
+    border: ridge;
+    border-color: black;
+    border-radius: 10px;
+}
+#ssilki
+{
+    width: 20%;
+    margin-left:40% ;
+    margin-right:40%;
+}
+#form
+{
+    width: 10%;
+    margin-left:45% ;
+    margin-right:45%;
+}
+#tablestyle11
+{
+background-color: black;
+width: 100%;
+}
+#tablestyle1
+{
+background-color: aquamarine;
+}
+#tablestyle2
+{
+background-color: chartreuse;
+}
+.footerstyle
+{
+    height: 60px;
+    width: auto;
+    margin-top: 50px;
+    color: #526666;
+    font-size: 15px;
+    background-color: #5db890;
+    padding: 20px;
+}
