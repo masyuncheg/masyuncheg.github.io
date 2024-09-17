@@ -16,7 +16,7 @@
 #navstyle
 {
     background-color: #255648;
-    margin-left: 60%;
+    margin-left: 900px;
     height: 40px;
     font-size: 18px;
     padding: 10px;
@@ -28,7 +28,7 @@
 .astyle
 {
     color: #ffffff;
-    margin: 10% ;
+    margin: 20px ;
     margin-top: 5px;
 }
 #imgstyle
@@ -39,17 +39,17 @@
     margin-left: 75px;
     margin-top: -20px;
 }
-.h1style
+#h1style
 {
     margin-left: 250px;
     margin-top: 10px;
 }
 .divstyle1
 {
+    width: 900px;
     background-color: #1ed25c69;
+    margin: 0 auto;
     margin-top: 80px;
-    margin-left: 10%;
-    margin-right: 10%;
     padding: 15px;
     border: ridge;
     border-color: black;
