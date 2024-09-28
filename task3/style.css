@@ -1,0 +1,254 @@
+
+    #headerstyle {
+        background-color: #58ab8f;
+        border-bottom: ridge;
+        border-color: black;
+        display: flex;
+        flex-direction: row;
+        height: 160px;
+        justify-content: space-around;
+    }
+
+    #imgstyle {
+        border-radius: 100%;
+        width: 100px;
+        float: left;
+        margin-top: 25px;
+        display: flex;
+        margin-right: 50px;
+    }
+    #h1style {
+        margin-right: 20%;
+        margin-top: 25px;
+        width: 400px;
+        display: flex;
+    }
+    .navstyle {
+        display: none;
+    }
+    .navstyle2
+    {
+        background-color: #255648;
+        font-size: 25px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 75px;
+    }
+    .astyle {
+        color: #ffffff;
+        margin: 20px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+    .divstyle1 {
+        width: 100%;
+        background-color: #1ed25c69;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        border: none;
+    }
+    .divstyle2 {
+        width: 100%;
+        background-color: #1ed25c69;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        border:none;
+    }
+    #footerstyle {
+        height: 60px;
+        width: auto;
+        margin-top: 50px;
+        color: #526666;
+        font-size: 15px;
+        background-color: #5db890;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+.tablestyle1
+{
+background-color: aquamarine;
+}
+.tablestyle2
+{
+background-color: chartreuse;
+}
+#bodystyle
+{
+    background-color: #c3e7cc;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+li
+{
+    width: 90%;
+    margin: 5px;
+}
+#tablestyle11
+{
+background-color: black;
+width: 85%;
+height: 300px;
+margin: 0 auto;
+}
+.ssilki
+{
+    
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 800px)
+{
+#bodystyle
+{
+    background-color: #c3e7cc;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+li
+{
+    width: 90%;
+    margin: 5px;
+}
+
+#headerstyle {
+    background-color: #58ab8f;
+    border-bottom: ridge;
+    border-color: black;
+    display: flex;
+    flex-direction: row;
+    height: 160px;
+    justify-content: space-between;
+}
+.navstyle {
+    background-color: #255648;
+    margin-left: 0%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 20px;
+    border-left: ridge;
+    border-bottom: ridge;
+    border-color: black;
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navstyle2
+{
+    display: none;
+}
+.astyle {
+    color: #ffffff;
+    margin: 20px;
+    margin-top: 5px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#imgstyle {
+    border-radius: 100%;
+    width: 100px;
+    float: left;
+    margin-left: 75px;
+    margin-top: 25px;
+    display: flex;
+}
+#h1style {
+    margin-left: 60px;
+    margin-top: 25px;
+    width: 400px;
+    display: flex;
+}
+.divstyle1 {
+    max-width: 1024px;
+    width: 80%;
+    background-color: #1ed25c69;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 15px;
+    border: ridge;
+    border-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.divstyle2 {
+    max-width: 1024px;
+    width: 80%;
+    background-color: #1ed25c69;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 15px;
+    border: ridge;
+    border-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.ssilki
+{
+    
+    text-align: center;
+    margin: 20px;
+}
+#form
+{
+   
+    text-align: center;
+    margin: 20px;
+}
+#tablestyle11
+{
+background-color: black;
+width: 100%;
+height: 300px;
+}
+.tablestyle1
+{
+background-color: aquamarine;
+}
+.tablestyle2
+{
+background-color: chartreuse;
+}
+#footerstyle {
+    height: 60px;
+    width: auto;
+    margin-top: 50px;
+    color: #526666;
+    font-size: 15px;
+    background-color: #5db890;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+}
+
+
+
