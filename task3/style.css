@@ -197,6 +197,7 @@ li
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    order:0;
 }
 .divstyle2 {
     max-width: 1024px;
@@ -210,6 +211,7 @@ li
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    order:0;
 }
 .ssilki
 {
@@ -247,6 +249,7 @@ background-color: chartreuse;
     padding: 20px;
     display: flex;
     flex-direction: row;
+    order:0;
 }
 }
 
