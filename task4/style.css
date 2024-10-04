@@ -1,0 +1,155 @@
+
+    header {
+        background-color: #58ab8f;
+        border-bottom: ridge;
+        border-color: black;
+        
+    }
+
+    #imgstyle {
+        border-radius: 100%;
+        width: 100px;
+        float: left;
+        margin-top: 25px;
+        display: flex;
+        margin-right: 50px;
+    }
+ 
+    .navstyle {
+        display: none;
+    }
+    .navstyle2
+    {
+        background-color: #255648;
+        
+    }
+    .astyle {
+        color: #ffffff;
+        margin: 20px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+    .divstyle1 {
+        background-color: #1ed25c69; 
+        
+        border: none;
+    }
+    .divstyle2 {
+      
+        background-color: #1ed25c69;
+        
+        border:none;
+    }
+    #footerstyle {
+        height: 60px;
+        width: auto;
+        margin-top: 50px;
+        color: #526666;
+        font-size: 15px;
+        background-color: #5db890;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+.tablestyle1
+{
+background-color: aquamarine;
+}
+.tablestyle2
+{
+background-color: chartreuse;
+}
+.body
+{
+    background-color: #c3e7cc;
+}
+li
+{
+    width: 90%;
+    margin: 5px;
+}
+.tablestyle11
+{
+background-color: black;
+
+}
+.ssilki
+{
+    
+    text-align: center;
+    margin: 20px;
+}
+
+.footerstyle {
+    color: #526666;
+    background-color: #5db890;
+   
+}
+
+
+
+
+@media screen and (min-width: 768px)
+{
+.body
+{
+    background-color: #c3e7cc;
+}
+
+
+
+li
+{
+    width: 90%;
+    margin: 5px;
+}
+
+header {
+    background-color: #58ab8f;
+    border-bottom: ridge;
+    border-color: black;
+    
+}
+.navstyle {
+    background-color: #255648;
+    border-left: ridge;
+    border-bottom: ridge;
+    border-color: black;
+}
+.navstyle2
+{
+    display: none;
+}
+.astyle {
+    color: #ffffff;
+}
+
+.divstyle1 {
+    background-color: #1ed25c69;
+    border: ridge;
+    border-color: black;
+    border-radius: 10px;
+    
+}
+.divstyle2 {
+ 
+    background-color: #1ed25c69;
+    border: ridge;
+    border-color: black;
+    border-radius: 10px;
+    
+}
+
+.footerstyle {
+    color: #526666;
+    background-color: #5db890;
+   
+}
+}
+
+
+
