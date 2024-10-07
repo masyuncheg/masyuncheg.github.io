@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>
+        Задание 5.
+    </title>
+    <script src="calccost.js" rel="script" defer></script>
+</head>
+<body>
+    <div style="display: flex; flex-direction:column; align-items: center; margin-top: 10%;">
+        <form>
+            <input name="count" placeholder="Введите кол-во товара">
+            <select name="product">
+                <option value="999">Футболка</option>
+                <option value="2999">Джинсы</option>
+                <option value="4999">Куртка</option>
+                <option value="9999">Кожаные туфли</option>
+                <option value="14999">Часы</option>
+            </select>
+            <button onclick="return calccost()">Рассчитать</button>
+            <div style="margin-top: 15px; padding: 2px;display: flex;justify-content: center ; height: 1px; border: ridge; border-color: black;" id="result">
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+</html>
