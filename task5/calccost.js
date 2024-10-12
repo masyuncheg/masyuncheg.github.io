@@ -1,4 +1,4 @@
-function calccost()
+window.addEventListener("DOMContentLoaded", function calccost()
 {
     let count=document.getElementsByName("count");
     let product=document.getElementsByName("product");
@@ -12,4 +12,4 @@ function calccost()
     res.innerHTML=result+" руб.";
 
     return false;
-}
+})
