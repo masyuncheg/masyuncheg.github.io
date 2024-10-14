@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>
+        Задание 5.
+    </title>
+    <script src="calccost.js" rel="script" defer></script>
+</head>
+<body>
+    <div style="display: flex; margin-top: 100px !important;margin:0 auto; width:330px">
+        <form style="display: flex; flex-direction: column;">
+            <input name="count" placeholder="Введите кол-во товара">
+            <select name="product" style="margin-top: 10px;">
+
+                <option style="text-align: center;" value="1">Футболка</option>
+                <option style="text-align: center;" value="2">Джинсы</option>
+                <option style="text-align: center;" value="3">Туфли</option>
+            </select>
+        
+            <p1 style="margin-top: 15px;">Выберите тип доставки:</p1>
+            <label><input name="rad1" type="radio" value="1">Доставка курьером</label>
+            <label><input name="rad1"type="radio" value="2">Доставка в пункт выдачи</label>
+            <label><input name="rad1" type="radio"value="3">Самовывоз</label>
+            <div name="options" style="margin-top:15px;display: none; flex-direction: column; width: 100px;">
+                <p1>Опции:</p1>
+                <label><input name="rad2" type="radio" value="1">Черная</label>
+                <label><input name="rad2" type="radio" value="2">Белая</label>
+            </div>
+            <div name="checkboxes" style="display: none; flex-direction:column; margin-top: 15px;">
+                <label><input name="check1" type="checkbox" value="1">С ортопедической стелькой</label>
+                <label><input name="check2" type="checkbox" value="2">С усиленным носиком</label>
+            
+            </div>
+            <div style="margin-top: 15px; padding: 2px;display: flex;justify-content: center ; height: 18px; border: ridge; border-color: black;" id="result">
+            </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
