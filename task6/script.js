@@ -17,19 +17,33 @@ function updateprice()
 
     let OpDisplay=document.getElementById("options");
     let PrDisplay=document.getElementById("checkboxes");
+    let checkboxes=document.querySelectorAll("#checkboxes input");
+    let radios=document.getElementsByName("rad2");
+
     if(select.value==1)
     {    OpDisplay.style.display="none";
         PrDisplay.style.display="none";
+        checkboxes.forEach(function(checkbox){
+            checkbox.checked=0;
+        })
+            radios[0].checked=1;
+        
     }
     if(select.value==2)
     {
         OpDisplay.style.display="flex";
         PrDisplay.style.display="none";
+        checkboxes.forEach(function(checkbox){
+            checkbox.checked=0;
+        })
     }
     if(select.value==3)
         {
             OpDisplay.style.display="none";
-            PrDisplay.style.display="flex";
+            PrDisplay.style.display="flex";checkboxes.forEach(function(checkbox){
+                checkbox.checked=0;
+            })
+            radios[0].checked=1;
         }
     
     let delivery = document.getElementsByName("rad1");
