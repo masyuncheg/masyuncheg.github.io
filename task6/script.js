@@ -40,9 +40,7 @@ function updateprice()
     if(select.value==3)
         {
             OpDisplay.style.display="none";
-            PrDisplay.style.display="flex";checkboxes.forEach(function(checkbox){
-                checkbox.checked=0;
-            })
+            PrDisplay.style.display="flex";
             radios[0].checked=1;
         }
     
