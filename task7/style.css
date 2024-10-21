@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #666666;
+}
+
+img{
+    height:300 ;
+    width: 300;
+}
+.slider
+{
+    width: 75%;
+    
+}
+.slider .slick-slide{
+    margin:10 px !important;
+}
+
+
