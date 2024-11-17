@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <body>
+        <button id="open">Открыть форму</button>
+    <div id="main" style="display: none">
+        <form class="form" id="form" action="https://formcarry.com/s/__PUDoDGeF-">
+            <label>
+                Введите ФИО:
+                <br/>
+                <input name="name" id="name" placeholder="Иванов Иван Иванович">
+            </label>
+            <label>
+                Введите свою почту:
+                <br/>
+                <input name="email" id="email" placeholder="email" type="email">
+            </label>
+            <label>
+                Введите номер телефона:
+                <br/>
+                <input name="number" id="number" value="+7" type="tel">
+            </label>
+            <label>
+                Введите организацию:
+                <br/>
+                <input name="organization" id="organization">
+            </label>
+            <label>
+            Введите сообщение:
+            <br/>
+            <textarea name="message" id="message" placeholder="Сообщение" style="height: 50px;width:400px;"></textarea>
+        </label>
+            <label>
+                <input name="check" type="checkbox" id="check">Cогласие с политикой на обработку персональных данных.
+            </label>
+        <label><button type="submit" id="send">Отправить</button></label>
+        </form>
+    </div>
+</head>
+</body>
+</html>
