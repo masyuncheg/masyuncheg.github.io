@@ -22,5 +22,6 @@ label{
     align-items: center;
     width: 500px;
     max-width: 75%;
-    background-color: moccasin;
+    border-radius: 5%;
+    background-color: #92dfff73;
 }
