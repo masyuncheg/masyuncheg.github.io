@@ -94,7 +94,7 @@ try {
     $tb1->execute([$fio, $number, $email, $date_r, $radio1, $biography]);
 	$form_id = $db->lastInsertId();
     $tb2 = $db->prepare("INSERT INTO users_langs (form_id, lang_id) VALUES (?, ?)");
-    foreach($languages as $row)
+    foreach($yapses as $row)
         $tb2->execute([$form_id, $row['lang_id']]);
 }
 catch(PDOException $e){
@@ -109,7 +109,7 @@ setcookie('radio1_val', '', time() - 60*60*24*60*12);
 setcookie('yaps_val', '', time() - 60*60*24*60*12);
 setcookie('biography_val', '', time() - 60*60*24*60*12);
 setcookie('check_val', '', time() - 60*60*24*60*12);
-setcooke('save','1');
+setcookie('save','1');
 }
 
 header('Location: index.php');
