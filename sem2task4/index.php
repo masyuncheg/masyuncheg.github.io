@@ -145,7 +145,7 @@ else
       setcookie('save','',100000);
       $messages['success'] = '<div class="messages">Данные сохранены</div>';
     }
-    else $messages['succes']='';
+    else $messages['success']='';
 
     errs('fio',$fio);
     errs('number',$number);
@@ -154,7 +154,7 @@ else
     errs('radio1',$radio1);
     errs('yaps',$yaps);
     errs('biography',$biography);
-    errs('checl',$check);
+    errs('check',$check);
 
     $yapses=explode(',',$values['yaps']);
 
