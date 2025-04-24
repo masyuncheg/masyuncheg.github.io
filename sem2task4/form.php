@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <title>
-        Задание 3.
+        Задание 4.
     </title>
     </head>
     <body class="body flex-column d-flex align-items-center">
@@ -18,7 +18,7 @@
         
         <form action="" method="POST" class="mt-3 form">
 
-        <div class="din"><?php echo $messages['success']; ?></div>
+        <div class="din"> <?php echo $messages['success']; ?> </div>
 
             <label>
                 Введите ФИО:
@@ -58,11 +58,11 @@
         <div class="mb-1">
           <label>
             <input name="radio1" class="ml-2" type="radio" value="male" <?php if($values['radio1'] == 'male') echo 'checked'; ?>/>
-            <span class="<?php echo ($errors['radio'] != NULL) ? 'err' : ''; ?>"> Мужской </span>
+            <span class="<?php echo ($errors['radio1'] != NULL) ? 'err' : ''; ?>"> Мужской </span>
           </label>
           <label>
             <input name="radio1" class="ml-2" type="radio" value="female" <?php if($values['radio1'] == 'female') echo 'checked'; ?>/>
-            <span class="<?php echo ($errors['radio'] != NULL) ? 'err' : ''; ?>"> Женский </span>
+            <span class="<?php echo ($errors['radio1'] != NULL) ? 'err' : ''; ?>"> Женский </span>
           </label>
         </div>
         <div class="error"> <?php echo $messages['radio1']?> </div>
