@@ -64,7 +64,7 @@ if(!check('yaps','Выберите язык программирования',em
 
 try
 {
-    $dbyaps = $db->prepare("SELECT lang_id, name FROM langs WHERE name IN ($qlang)");
+    $dbyaps = $db->prepare("SELECT lang_id, lang FROM langs WHERE lang IN ($qlang)");
     foreach ($yaps as $key => $value)
         $dbyaps->bindValue(($key+1), $value);
     $dbyaps->execute();
