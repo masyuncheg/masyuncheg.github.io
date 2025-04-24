@@ -18,7 +18,7 @@
         
         <form action="" method="POST" class="mt-3 form">
 
-        <div class="din"> <?php echo $messages['success']; ?> </div>
+        <div class="din"> <?php echo $messages['success'] ?> </div>
 
             <label>
                 Введите ФИО:
@@ -72,7 +72,7 @@
             <label>
                 Выберите любимый язык программирования:
                 <br/>
-            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'red' : ''; ?>" multiple="multiple">
+            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
                 <option value="Pascal" <?php echo (in_array('Pascal', $yaps)) ? 'selected' : ''; ?>>Pascal</option>
                 <option value="C" <?php echo (in_array('C', $yaps)) ? 'selected' : ''; ?>>C</option>
                 <option value="C++"<?php echo (in_array('C++', $yaps)) ? 'selected' : ''; ?>>C++</option>
