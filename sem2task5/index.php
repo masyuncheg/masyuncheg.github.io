@@ -189,7 +189,7 @@ else
         setcookie($txt.'_error', '', time() - 60*60*24*60);
         return;
     }
-
+	$messages['success'] = '';
     if(!empty($_COOKIE['save']))
     {
       setcookie('save','',100000);
