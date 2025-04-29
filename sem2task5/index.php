@@ -155,7 +155,7 @@ setcooke('save','1');
 }
 
 header('Location: index.php');
-}
+
 else
 {
   $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
