@@ -72,19 +72,19 @@
             <label>
                 Выберите любимый язык программирования:
                 <br/>
-            <select name="yaps[]" class="<?php echo ($errors['yapses'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
-                <option value="Pascal" <?php echo (in_array('Pascal', $yaps)) ? 'selected' : ''; ?>>Pascal</option>
-                <option value="C" <?php echo (in_array('C', $yaps)) ? 'selected' : ''; ?>>C</option>
-                <option value="C++"<?php echo (in_array('C++', $yaps)) ? 'selected' : ''; ?>>C++</option>
-                <option value="JavaScript"<?php echo (in_array('JavaScript', $yaps)) ? 'selected' : ''; ?>>JavaScript</option>
-                <option value="Python" <?php echo (in_array('Python', $yaps)) ? 'selected' : ''; ?>>Python</option>
-                <option value="Java" <?php echo (in_array('Java', $yaps)) ? 'selected' : ''; ?>>Java</option>
-                <option value="Haskel" <?php echo (in_array('Haskel', $yaps)) ? 'selected' : ''; ?>>Haskel</option>
-                <option value="Clojure" <?php echo (in_array('Clojure', $yaps)) ? 'selected' : ''; ?>>Clojure</option>
-                <option value="Prolog" <?php echo (in_array('Prolog', $yaps)) ? 'selected' : ''; ?>>Prolog</option>
-                <option value="Scala" <?php echo (in_array('Scala', $yaps)) ? 'selected' : ''; ?>>Scala</option>
+            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
+                <option value="Pascal" <?php echo (in_array('Pascal', $yapses)) ? 'selected' : ''; ?>>Pascal</option>
+                <option value="C" <?php echo (in_array('C', $yapses)) ? 'selected' : ''; ?>>C</option>
+                <option value="C++"<?php echo (in_array('C++', $yapses)) ? 'selected' : ''; ?>>C++</option>
+                <option value="JavaScript"<?php echo (in_array('JavaScript', $yapses)) ? 'selected' : ''; ?>>JavaScript</option>
+                <option value="Python" <?php echo (in_array('Python', $yapses)) ? 'selected' : ''; ?>>Python</option>
+                <option value="Java" <?php echo (in_array('Java', $yapses)) ? 'selected' : ''; ?>>Java</option>
+                <option value="Haskel" <?php echo (in_array('Haskel', $yapses)) ? 'selected' : ''; ?>>Haskel</option>
+                <option value="Clojure" <?php echo (in_array('Clojure', $yapes)) ? 'selected' : ''; ?>>Clojure</option>
+                <option value="Prolog" <?php echo (in_array('Prolog', $yapses)) ? 'selected' : ''; ?>>Prolog</option>
+                <option value="Scala" <?php echo (in_array('Scala', $yapses)) ? 'selected' : ''; ?>>Scala</option>
             </select>
-            <div class="error"> <?php echo $messages['yapses']?> </div>
+            <div class="error"> <?php echo $messages['yaps']?> </div>
             </label>
             <br/>
             <br/>
