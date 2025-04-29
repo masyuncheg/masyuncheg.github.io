@@ -155,7 +155,7 @@ setcooke('save','1');
 }
 
 header('Location: index.php');
-
+}
 else
 {
   $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
@@ -201,7 +201,7 @@ else
   if(!empty($_COOKIE['password']))
     $messages['success']=sprintf('Вы можете <a href="auth.php">войти</a> <strong>%s</strong><br>
            <strong>%s</strong> для изменения данных.', strip_tags($_COOKIE['login']), strip_tags($_COOKIE['password']));
-
+  }
     errs('fio',$fio);
     errs('number',$number);
     errs('email',$email);
@@ -252,5 +252,5 @@ else
 
     include('form.php');
 }
-}
+
 ?>
