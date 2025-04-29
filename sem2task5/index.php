@@ -197,7 +197,6 @@ else
       setcookie('password','',100000);
       $messages['success'] = '<div class="messages">Данные сохранены</div>';
     
-    else $messages['succes']='';
   if(!empty($_COOKIE['password']))
     $messages['success']=sprintf('Вы можете <a href="auth.php">войти</a> <strong>%s</strong><br>
            <strong>%s</strong> для изменения данных.', strip_tags($_COOKIE['login']), strip_tags($_COOKIE['password']));
