@@ -219,7 +219,7 @@ else
             $dbLangs->execute([$_SESSION['form_id']]);
             $user_data = $dbLangs->fetchAll(PDO::FETCH_ASSOC)[0];
 
-            $form_id = $user_data['id'];
+            $form_id = $user_data['form_id'];
             $_SESSION['form_id'] = $form_id;
 
             $dbL = $db->prepare("SELECT l.lang FROM users_langs f
