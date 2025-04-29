@@ -222,7 +222,7 @@ else
             $form_id = $user_data['id'];
             $_SESSION['form_id'] = $form_id;
 
-            $dbL = $db->prepare("SELECT l.name FROM users_langs f
+            $dbL = $db->prepare("SELECT l.lang FROM users_langs f
                                 JOIN langs l ON l.lang_id = f.lang_id
                                 WHERE f.form_id = ?");
 
