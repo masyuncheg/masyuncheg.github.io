@@ -151,11 +151,11 @@ setcookie('yaps_val', '', time() - 60*60*24*60*12);
 setcookie('biography_val', '', time() - 60*60*24*60*12);
 setcookie('check_val', '', time() - 60*60*24*60*12);
   }
-setcooke('save','1');
-}
+setcookie('save','1');
+
 
 header('Location: index.php');
-
+}
 else
 {
   $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
