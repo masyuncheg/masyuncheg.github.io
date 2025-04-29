@@ -21,7 +21,7 @@
         $password = md5($_POST['password']);
         try
         {
-            $tb = $db->prepare("SELECT id FROM users WHERE login = ? and password = ?");
+            $tb = $db->prepare("SELECT id FROM passwords WHERE login = ? and password = ?");
             $tb->execute([$login, $password]);
             $its = $tb->rowCount();
             if($its)
