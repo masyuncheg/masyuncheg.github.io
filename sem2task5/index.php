@@ -112,7 +112,7 @@ if(!$error)
   if($auth)
   {
     $tb=$db->prepare("UPDATE users SET fio = ?, number = ?, email = ?, date_r = ?, male = ?, biography = ? WHERE form_id = ?");
-    $tb->execute([$fio, $number, $email, $date, $radio, $bio, $_SESSION['form_id']]);
+    $tb->execute([$fio, $number, $email, $date_r, $radio1, $biography, $_SESSION['form_id']]);
 
     $tb = $db->prepare("DELETE FROM users_langs WHERE form_id = ?");
     $tb->execute([$_SESSION['form_id']]);
