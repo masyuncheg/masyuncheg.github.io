@@ -3,6 +3,12 @@ header('Content-Type: text/html; charset=UTF-8');
 
 session_start();
 
+$user = 'u68787'; 
+$pass = '1417112'; 
+$db = new PDO('mysql:host=localhost;dbname=u68787', $user, $pass,
+  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
+
+
 $error = FALSE;
 $auth=!empty($_SESSION['login']);
 
@@ -69,10 +75,6 @@ if(!check('email', 'Это поле пустое', empty($email)))
     check('check', 'Ознакомьтесь с контрактом', empty($check));
 
 
-$user = 'u68787'; 
-$pass = '1417112'; 
-$db = new PDO('mysql:host=localhost;dbname=u68787', $user, $pass,
-  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
 $qlang = implode(',', array_fill(0, count($yaps), '?'));
 
