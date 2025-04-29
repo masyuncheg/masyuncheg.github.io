@@ -222,7 +222,7 @@ else
             $user_data = $dbLangs->fetchAll(PDO::FETCH_ASSOC)[0];
 
             $form_id = $user_data['form_id'];
-            $_SESSION['form_id'] = $form_id;
+            $_SESSION['id'] = $form_id;
 
             $dbL = $db->prepare("SELECT l.lang FROM users_langs f
                                 JOIN langs l ON l.lang_id = f.lang_id
@@ -234,13 +234,13 @@ else
             foreach ($dbL->fetchAll(PDO::FETCH_ASSOC) as $item)
                 $yapses[] = $item['name'];
 
-            set('fio', $user_inf['fio']);
-            set('number', $user_inf['number']);
-            set('email', $user_inf['email']);
-            set('date_r', $user_inf['date_r']);
-            set('radio1', $user_inf['radio1']);
+            set('fio', $user_data['fio']);
+            set('number', $user_data['number']);
+            set('email', $user_data['email']);
+            set('date_r', $user_data['date_r']);
+            set('radio1', $user_data['radio1']);
             set('yaps', $yaps);
-            set('biography', $user_inf['biography']);
+            set('biography', $user_data['biography']);
             set('check', "1");
       }
       catch (PDOException $e) {
