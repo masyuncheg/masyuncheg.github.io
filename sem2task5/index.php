@@ -127,6 +127,10 @@ if(!$error)
     $hpass=md5($password);
   
 try {
+  $stmt = $db->prepare("INSERT INTO passwords (login, password) VALUES (?, ?)");
+  $stmt->execute([$login, $hpass]);
+
+
 	$tb1 = $db->prepare("INSERT INTO users (fio, number, email, date_r, male, biography) VALUES (?, ?, ?, ?, ?, ?)");
     $tb1->execute([$fio, $number, $email, $date_r, $radio1, $biography]);
 	$form_id = $db->lastInsertId();
@@ -151,7 +155,7 @@ setcooke('save','1');
 }
 
 header('Location: index.php');
-}
+
 else
 {
   $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
@@ -244,8 +248,9 @@ else
         exit();
     }
   }
-    
+
 
     include('form.php');
+}
 }
 ?>
