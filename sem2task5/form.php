@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <title>
-        Задание 4.
+        Задание 5.
     </title>
     </head>
     <body class="body flex-column d-flex align-items-center">
@@ -72,7 +72,7 @@
             <label>
                 Выберите любимый язык программирования:
                 <br/>
-            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'red' : ''; ?>" multiple="multiple">
+            <select name="yaps[]" class="<?php echo ($errors['yapses'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
                 <option value="Pascal" <?php echo (in_array('Pascal', $yaps)) ? 'selected' : ''; ?>>Pascal</option>
                 <option value="C" <?php echo (in_array('C', $yaps)) ? 'selected' : ''; ?>>C</option>
                 <option value="C++"<?php echo (in_array('C++', $yaps)) ? 'selected' : ''; ?>>C++</option>
@@ -84,7 +84,7 @@
                 <option value="Prolog" <?php echo (in_array('Prolog', $yaps)) ? 'selected' : ''; ?>>Prolog</option>
                 <option value="Scala" <?php echo (in_array('Scala', $yaps)) ? 'selected' : ''; ?>>Scala</option>
             </select>
-            <div class="error"> <?php echo $messages['yaps']?> </div>
+            <div class="error"> <?php echo $messages['yapses']?> </div>
             </label>
             <br/>
             <br/>
