@@ -80,7 +80,7 @@
                 <option value="Python" <?php echo (in_array('Python', $yapses)) ? 'selected' : ''; ?>>Python</option>
                 <option value="Java" <?php echo (in_array('Java', $yapses)) ? 'selected' : ''; ?>>Java</option>
                 <option value="Haskel" <?php echo (in_array('Haskel', $yapses)) ? 'selected' : ''; ?>>Haskel</option>
-                <option value="Clojure" <?php echo (in_array('Clojure', $yapes)) ? 'selected' : ''; ?>>Clojure</option>
+                <option value="Clojure" <?php echo (in_array('Clojure', $yapses)) ? 'selected' : ''; ?>>Clojure</option>
                 <option value="Prolog" <?php echo (in_array('Prolog', $yapses)) ? 'selected' : ''; ?>>Prolog</option>
                 <option value="Scala" <?php echo (in_array('Scala', $yapses)) ? 'selected' : ''; ?>>Scala</option>
             </select>
