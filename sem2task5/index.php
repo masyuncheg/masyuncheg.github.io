@@ -221,8 +221,8 @@ else
             $dbLangs->execute([$_SESSION['form_id']]);
             $user_data = $dbLangs->fetchAll(PDO::FETCH_ASSOC)[0];
 
-            $form_id = $user_data['form_id'];
-            $_SESSION['id'] = $form_id;
+            $form_id = $user_data['id'];
+            $_SESSION['form_id'] = $form_id;
 
             $dbL = $db->prepare("SELECT l.lang FROM users_langs f
                                 JOIN langs l ON l.lang_id = f.lang_id
@@ -238,7 +238,7 @@ else
             set('number', $user_data['number']);
             set('email', $user_data['email']);
             set('date_r', $user_data['date_r']);
-            set('radio1', $user_data['radio1']);
+            set('radio1', $user_data['male']);
             set('yaps', $yaps);
             set('biography', $user_data['biography']);
             set('check', "1");
