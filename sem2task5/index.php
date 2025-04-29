@@ -153,7 +153,7 @@ setcookie('check_val', '', time() - 60*60*24*60*12);
   }
 setcookie('save','1');
 
-
+}
 header('Location: index.php');
 }
 else
@@ -196,7 +196,7 @@ else
       setcookie('login','',100000);
       setcookie('password','',100000);
       $messages['success'] = '<div class="messages">Данные сохранены</div>';
-    }
+    
     else $messages['succes']='';
   if(!empty($_COOKIE['password']))
     $messages['success']=sprintf('Вы можете <a href="auth.php">войти</a> <strong>%s</strong><br>
