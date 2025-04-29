@@ -197,8 +197,8 @@ else
       $messages['success'] = '<div class="messages">Данные сохранены</div>';
     
   if(!empty($_COOKIE['password']))
-    $messages['success']=sprintf('Вы можете <a href="auth.php">войти</a> <strong>%s</strong><br>
-           <strong>%s</strong> для изменения данных.', strip_tags($_COOKIE['login']), strip_tags($_COOKIE['password']));
+    $messages['success']=sprintf('Вы можете <a href="auth.php">войти для изменения данных</a> Логин: <strong>%s</strong><br>
+           Пароль: <strong>%s</strong>', strip_tags($_COOKIE['login']), strip_tags($_COOKIE['password']));
   }
     errs('fio',$fio);
     errs('number',$number);
