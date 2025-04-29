@@ -65,7 +65,6 @@ if(!check('email', 'Это поле пустое', empty($email)))
     if(!check('date_r', 'Это поле пустое', empty($date_r)))
         check('date_r', 'Неправильная дата', strtotime('now') < strtotime($date_r));
     check('radio1', "Не выбран пол", empty($radio1));
-    if(!check('biography', 'Это поле пустое', empty($biography)))
         check('biography', 'Слишком длинное поле, максимум символов - 1000', strlen($biography) > 1000);
     check('check', 'Ознакомьтесь с контрактом', empty($check));
 
