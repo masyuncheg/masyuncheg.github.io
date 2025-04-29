@@ -91,7 +91,7 @@
             <label>
                 Введите вашу биографию:
                 <br/>
-                <textarea name="biografy" placeholder="Ваша биография" style="height: 100px;width:400px ;" class="<?php echo ($errors['biography'] != NULL) ? 'err' : ''; ?>"></textarea>
+                <textarea name="biography" placeholder="Ваша биография" style="height: 100px;width:400px ;" class="<?php echo ($errors['biography'] != NULL) ? 'err' : ''; ?>"></textarea>
                 <div class="error"> <?php echo $messages['biography']?> </div>
 
             </label>
