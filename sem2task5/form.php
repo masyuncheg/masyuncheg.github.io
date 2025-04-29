@@ -104,7 +104,13 @@
             <br/>
             <br/>
             <label>
-                <input name="save" type="submit" value="Сохранить">
+               <?php
+          if($log) echo '<button class="button edbut" type="submit">Изменить</button>';
+          else echo '<button class="button" type="submit">Отправить</button>';
+          if($log) echo '<button class="button" type="submit" name="logout_form">Выйти</button>'; 
+          else echo '<a class="btnlike" href="login.php" name="logout_form">Войти</a>';
+        ?>
+
             </label>
 
         </form>
