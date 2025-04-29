@@ -4,7 +4,7 @@ header('Content-Type: text/html; charset=UTF-8');
 session_start();
 
 $error = FALSE;
-$auth=!empty($_SESSION['login'])
+$auth=!empty($_SESSION['login']);
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
