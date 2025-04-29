@@ -105,9 +105,9 @@
             <br/>
             <label>
                <?php
-          if($auth) echo '<button class="button edbut" type="submit">Изменить</button>';
+          if($log) echo '<button class="button edbut" type="submit">Изменить</button>';
           else echo '<button class="button" type="submit">Отправить</button>';
-          if($auth) echo '<button class="button" type="submit" name="logout_form">Выйти</button>'; 
+          if($log) echo '<button class="button" type="submit" name="logout_form">Выйти</button>'; 
           else echo '<a class="btnlike" href="login.php" name="logout_form">Войти</a>';
         ?>
 
