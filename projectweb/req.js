@@ -1,6 +1,6 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const form = new e.target;
+    const form = e.target;
     
      const formData = new FormData(form);
 
