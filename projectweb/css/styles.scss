@@ -1468,6 +1468,9 @@ body {
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   }
+.form-control:focus{
+    color: white !important;
+}
   
   #edit-field-telefon-0-value {
     margin-top: 40px;
