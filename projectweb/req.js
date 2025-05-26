@@ -20,8 +20,6 @@ document.getElementById('form').addEventListener('submit', async function(e) {
             if (data.login && data.password) {
                 console.log(`Login: ${data.login}, Password: ${data.password}`);
             }
-            if (data.profile_url) {
-                window.location.href = data.profile_url;
             }
         } else {
             // Показ ошибок
