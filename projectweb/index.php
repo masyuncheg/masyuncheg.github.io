@@ -8,7 +8,7 @@ $pass = '1417112';
 $db = new PDO('mysql:host=localhost;dbname=u68787', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
-// Определяем тип запроса
+
 $is_ajax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 $accept_json = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false;
 
@@ -17,7 +17,7 @@ $auth = !empty($_SESSION['login']);
 $response = ['success' => false, 'messages' => []];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Получаем данные в зависимости от типа запроса
+    
     if ($is_ajax && $accept_json) {
         $input = json_decode(file_get_contents('php://input'), true);
         $fio = isset($input['fio']) ? $input['fio'] : '';
@@ -40,18 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($_POST['logout_form'])) {
-    // Удаляем все куки
+    
     $cookies = ['fio', 'number', 'email', 'date_r', 'radio1', 'yaps', 'biography', 'check'];
     foreach ($cookies as $name) {
         setcookie($name.'_value', '', time() - 3600);
         setcookie($name.'_error', '', time() - 3600);
     }
     
-    // Уничтожаем сессию
+    
     session_unset();
     session_destroy();
     
-    // Возвращаем JSON для AJAX
+    
     if ($is_ajax) {
         header('Content-Type: application/json');
         echo json_encode(['redirect' => './']);
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Функция валидации и добавления ошибок
+  
     function validateField($field, $value, $validationFn, $errorMessage) {
         global $error, $response, $is_ajax;
         
@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return false;
     }
 
-    // Валидация полей
+    
     validateField('fio', $fio, function($v) { 
         return preg_match('/^([а-яё]+-?[а-яё]+)( [а-яё]+-?[а-яё]+){1,2}$/Diu', $v); 
     }, 'Неверный формат ФИО');
@@ -138,19 +138,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = TRUE;
     }
 
-    // Если нет ошибок - сохраняем данные
+    
     if (!$error) {
         try {
             if ($auth) {
-                // Обновление данных существующего пользователя
+                
                 $stmt = $db->prepare("UPDATE users SET fio = ?, number = ?, email = ?, date_r = ?, male = ?, biography = ? WHERE form_id = ?");
                 $stmt->execute([$fio, $number, $email, $date_r, $radio1, $biography, $_SESSION['form_id']]);
 
-                // Удаляем старые языки
+                
                 $stmt = $db->prepare("DELETE FROM users_langs WHERE form_id = ?");
                 $stmt->execute([$_SESSION['form_id']]);
 
-                // Добавляем новые языки
+            
                 $stmt = $db->prepare("INSERT INTO users_langs (form_id, lang_id) VALUES (?, ?)");
                 foreach ($yaps as $lang_id) {
                     $stmt->execute([$_SESSION['form_id'], $lang_id]);
@@ -164,21 +164,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     setcookie('save', '1', time() + 60*60*24);
                 }
             } else {
-                // Создание нового пользователя
+                
                 $login = uniqid();
                 $password = uniqid();
                 $hpass = md5($password);
 
-                // Сохраняем логин/пароль
+              
                 $stmt = $db->prepare("INSERT INTO passwords (login, password) VALUES (?, ?)");
                 $stmt->execute([$login, $hpass]);
 
-                // Сохраняем данные пользователя
+                
                 $stmt = $db->prepare("INSERT INTO users (fio, number, email, date_r, male, biography) VALUES (?, ?, ?, ?, ?, ?)");
                 $stmt->execute([$fio, $number, $email, $date_r, $radio1, $biography]);
                 $form_id = $db->lastInsertId();
 
-                // Сохраняем языки
+              
                 $stmt = $db->prepare("INSERT INTO users_langs (form_id, lang_id) VALUES (?, ?)");
                 foreach ($yaps as $lang_id) {
                     $stmt->execute([$form_id, $lang_id]);
@@ -196,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
 
-            // Очищаем куки с ошибками
+            
             if (!$is_ajax) {
                 $fields = ['fio', 'number', 'email', 'date_r', 'radio1', 'yaps', 'biography', 'check'];
                 foreach ($fields as $field) {
@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($is_ajax) {
                 $response['messages']['database'] = 'Ошибка базы данных: ' . $e->getMessage();
             } else {
-                // Обработка ошибки БД для обычного запроса
+                /
                 die('Error: ' . $e->getMessage());
             }
         }
@@ -218,12 +218,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($response);
         exit();
     } else {
-        // Редирект для обычного POST-запроса
+        
         header('Location: index.php');
         exit();
     }
 } else {
-    // Обработка GET-запроса (показать форму)
+    
     if ($is_ajax) {
         header('Content-Type: application/json');
         echo json_encode(['error' => 'Invalid request method']);
@@ -231,7 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     
-    // Старая логика отображения формы
+   
     $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
     $number = !empty($_COOKIE['number_error']) ? $_COOKIE['number_error'] : '';
     $email = !empty($_COOKIE['email_error']) ? $_COOKIE['email_error'] : '';
