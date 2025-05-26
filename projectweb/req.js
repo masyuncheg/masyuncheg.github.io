@@ -1,10 +1,6 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
 
- for (const [field, message] of Object.entries(data.messages)) {
-                const errorElement = document.getElementById(`${field}-error`);
-                
-                    errorElement.textContent = '';
-            }
+ 
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
