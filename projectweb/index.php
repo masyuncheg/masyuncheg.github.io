@@ -222,8 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Редирект для обычного POST-запроса
         header('Location: index.php');
         exit();
-    
-} else {
+    }
     // Обработка GET-запроса (показать форму)
     if ($is_ajax) {
         header('Content-Type: application/json');
