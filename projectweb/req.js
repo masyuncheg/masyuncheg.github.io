@@ -19,7 +19,6 @@ document.getElementById('form').addEventListener('submit', async function(e) {
             if (data.login && data.password) {
                 console.log(`Login: ${data.login}, Password: ${data.password}`);
             }
-            }
         } else {
             // Показ ошибок
             for (const [field, message] of Object.entries(data.messages)) {
