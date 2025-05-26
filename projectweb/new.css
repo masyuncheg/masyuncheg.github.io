@@ -1,0 +1,15 @@
+.din
+{
+    color: rgb(0, 255, 0);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.err
+{
+    border-color:rgb(109, 9, 9) !important;
+}
+.error
+{
+    color:rgb(109, 9, 9) !important;
+    margin-bottom:5px !important;
+}
