@@ -1,7 +1,7 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
-     const dinBlock = document.querySelector('.din');
+     
     
      const formData = new FormData(form);
 
@@ -19,8 +19,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
             // Обработка успешной отправки
             alert(data.messages.success);
             if (data.login && data.password) {
-                 dinBlock.innerHTML = ' Логин: <strong>${data.login}</strong><br>
-                    Пароль: <strong>${data.password}</strong>';
+                 
             }
             }
         } else {
