@@ -176,7 +176,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $response['success'] = true;
                     $response['login'] = $login;
                     $response['password'] = $password;
-                    $response['profile_url'] = 'profile.php?id='.$form_id;
                     $response['messages']['success'] = 'Аккаунт успешно создан';
                 } else {
                     setcookie('login', $login, time() + 60*60*24*30);
