@@ -1039,7 +1039,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 Введите ФИО:
                 <br/>
                 <input name="fio" class="<?php echo ($errors['fio'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['fio']; ?>" placeholder="Иванов Иван Иванович">
-                <div class="error"> <?php echo $messages['fio']?> </div>
+                <div class="error" id="fio-error"> <?php echo $messages['fio']?> </div>
             </label>
             <br/>
             <br/>
@@ -1047,7 +1047,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 Введите номер телефона:
                 <br/>
                 <input name="number" class="<?php echo ($errors['number'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['number']; ?>" type="tel">
-                <div class="error"> <?php echo $messages['number']?> </div>
+                <div class="error" id="number-error"> <?php echo $messages['number']?> </div>
             </label>
             <br/>
             <br/>
@@ -1055,7 +1055,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 Введите свою почту:
                 <br/>
                 <input name="email" class="<?php echo ($errors['email'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['email']; ?>" placeholder="email" type="email">
-                <div class="error"> <?php echo $messages['number']?> </div>
+                <div class="error" id="email-error"> <?php echo $messages['number']?> </div>
             </label>
             <br/>
             <br/>
@@ -1063,7 +1063,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 Выберите дату:
                 <br/>
                 <input name="date_r" class="<?php echo ($errors['date_r'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['date_r']; ?>" type="date">
-                <div class="error"> <?php echo $messages['date_r']?> </div>
+                <div class="error" id="date_r-error"> <?php echo $messages['date_r']?> </div>
         
             </label>
             <br/>
@@ -1080,7 +1080,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <span class="<?php echo ($errors['radio1'] != NULL) ? 'err' : ''; ?>"> Женский </span>
           </label>
         </div>
-        <div class="error"> <?php echo $messages['radio1']?> </div>
+        <div class="error" id="radio1-error"> <?php echo $messages['radio1']?> </div>
       </div>
             <br/>
             <br/>
@@ -1099,7 +1099,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 <option value="Prolog" <?php echo (in_array('Prolog', $yapses)) ? 'selected' : ''; ?>>Prolog</option>
                 <option value="Scala" <?php echo (in_array('Scala', $yapses)) ? 'selected' : ''; ?>>Scala</option>
             </select>
-            <div class="error"> <?php echo $messages['yaps']?> </div>
+            <div class="error" id="yaps[]-error"> <?php echo $messages['yaps']?> </div>
             </label>
             <br/>
             <br/>
@@ -1107,14 +1107,14 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 Введите вашу биографию:
                 <br/>
                 <textarea name="biography" placeholder="Ваша биография" style="height: 100px;width:400px ;" class="<?php echo ($errors['biography'] != NULL) ? 'err' : ''; ?>"></textarea>
-                <div class="error"> <?php echo $messages['biography']?> </div>
+                <div class="error" id="biography-error"> <?php echo $messages['biography']?> </div>
 
             </label>
             <br/>
             <br/>
             <label>
                 <input name="check" type="checkbox" value="Значение 1" <?php echo ($values['check'] != NULL) ? 'checked' : ''; ?>> С контрактом ознакомлен(а).
-                <div class="error"> <?php echo $messages['check']?> </div>
+                <div class="error" id="check-error"> <?php echo $messages['check']?> </div>
             </label>
             <br/>
             <br/>
