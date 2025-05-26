@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($is_ajax) {
                 $response['messages']['database'] = 'Ошибка базы данных: ' . $e->getMessage();
             } else {
-                /
+                
                 die('Error: ' . $e->getMessage());
             }
         }
