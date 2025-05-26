@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode(['error' => 'Invalid request method']);
         exit();
     }
-    }
+    
     // Старая логика отображения формы
     $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
     $number = !empty($_COOKIE['number_error']) ? $_COOKIE['number_error'] : '';
