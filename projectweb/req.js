@@ -1,17 +1,27 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
-    const dinBlock = document.querySelector('.din');
-     const formData = new FormData(form);
-
+    const formData = new FormData(form);
+    
+    // Если нажата кнопка выхода
+    const isLogout = e.submitter && e.submitter.name === 'logout_form';
+    
     try {
         const response = await fetch('index.php', {
             method: 'POST',
-            headers: {'X-Requested-With': 'XMLHttpRequest'},
-            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: isLogout ? new URLSearchParams({logout_form: 1}) : formData
         });
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
+        
+        if (isLogout) {
+            
+            window.location.reload();
+            return;
+        }
         
         if (data.success) {
             // Обработка успешной отправки
