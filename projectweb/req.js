@@ -1,7 +1,16 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    const formData = new FormData(e.target());
+     const formData = {
+        fio: this.fio.value,
+        number: this.number.value,
+        email: this.email.value,
+        date_r: this.date_r.value,
+        radio1: this.querySelector('input[name="radio1"]:checked')?.value,
+        yaps: Array.from(this.querySelectorAll('input[name="yaps[]"]:checked')).map(el => el.value),
+        biography: this.biography.value,
+        check: this.check.checked ? '1' : ''
+    };
 
     try {
         const response = await fetch('index.php', {
