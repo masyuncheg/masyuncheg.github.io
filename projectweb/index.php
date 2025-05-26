@@ -147,7 +147,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($is_ajax) {
                     $response['success'] = true;
                     $response['messages']['success'] = 'Данные успешно обновлены';
-                    $response['profile_url'] = 'profile.php?id='.$_SESSION['form_id'];
                 } else {
                     setcookie('save', '1', time() + 60*60*24);
                 }
