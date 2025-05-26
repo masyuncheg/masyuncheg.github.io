@@ -1034,11 +1034,11 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 <form class="form" id="form" action="" method="POST">
                    
                 <div class="din"> <?php echo $messages['success']; ?> </div>
-                
-                <label>
+
+            <label>
                 Введите ФИО:
                 <br/>
-                <input name="fio" class="js-text-full text-full form-text form-control <?php echo ($errors['fio'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['fio']; ?>" placeholder="Иванов Иван Иванович">
+                <input name="fio" class="<?php echo ($errors['fio'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['fio']; ?>" placeholder="Иванов Иван Иванович">
                 <div class="error"> <?php echo $messages['fio']?> </div>
             </label>
             <br/>
@@ -1046,7 +1046,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Введите номер телефона:
                 <br/>
-                <input name="number" class="js-text-full text-full form-text form-control <?php echo ($errors['number'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['number']; ?>" type="tel">
+                <input name="number" class="<?php echo ($errors['number'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['number']; ?>" type="tel">
                 <div class="error"> <?php echo $messages['number']?> </div>
             </label>
             <br/>
@@ -1054,7 +1054,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Введите свою почту:
                 <br/>
-                <input name="email" class="js-text-full text-full form-text form-control <?php echo ($errors['email'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['email']; ?>" placeholder="email" type="email">
+                <input name="email" class="<?php echo ($errors['email'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['email']; ?>" placeholder="email" type="email">
                 <div class="error"> <?php echo $messages['number']?> </div>
             </label>
             <br/>
@@ -1062,7 +1062,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Выберите дату:
                 <br/>
-                <input name="date_r" class="js-text-full text-full form-text form-control <?php echo ($errors['date_r'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['date_r']; ?>" type="date">
+                <input name="date_r" class="<?php echo ($errors['date_r'] != NULL) ? 'err' : ''; ?>" value="<?php echo $values['date_r']; ?>" type="date">
                 <div class="error"> <?php echo $messages['date_r']?> </div>
         
             </label>
@@ -1072,11 +1072,11 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
         <div>Пол</div>
         <div class="mb-1">
           <label>
-            <input name="radio1" class="js-text-full text-full form-text form-control ml-2" type="radio" value="male" <?php if($values['radio1'] == 'male') echo 'checked'; ?>/>
+            <input name="radio1" class="ml-2" type="radio" value="male" <?php if($values['radio1'] == 'male') echo 'checked'; ?>/>
             <span class="<?php echo ($errors['radio1'] != NULL) ? 'err' : ''; ?>"> Мужской </span>
           </label>
           <label>
-            <input name="radio1" class="js-text-full text-full form-text form-control ml-2" type="radio" value="female" <?php if($values['radio1'] == 'female') echo 'checked'; ?>/>
+            <input name="radio1" class="ml-2" type="radio" value="female" <?php if($values['radio1'] == 'female') echo 'checked'; ?>/>
             <span class="<?php echo ($errors['radio1'] != NULL) ? 'err' : ''; ?>"> Женский </span>
           </label>
         </div>
@@ -1087,7 +1087,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Выберите любимый язык программирования:
                 <br/>
-            <select name="yaps[]" class="js-text-full text-full form-text form-control <?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
+            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
                 <option value="Pascal" <?php echo (in_array('Pascal', $yapses)) ? 'selected' : ''; ?>>Pascal</option>
                 <option value="C" <?php echo (in_array('C', $yapses)) ? 'selected' : ''; ?>>C</option>
                 <option value="C++"<?php echo (in_array('C++', $yapses)) ? 'selected' : ''; ?>>C++</option>
@@ -1106,18 +1106,16 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Введите вашу биографию:
                 <br/>
-                <textarea name="biography" placeholder="Ваша биография" style="height: 100px;width:400px ;" class="js-text-full text-full form-text form-control <?php echo ($errors['biography'] != NULL) ? 'err' : ''; ?>"></textarea>
+                <textarea name="biography" placeholder="Ваша биография" style="height: 100px;width:400px ;" class="<?php echo ($errors['biography'] != NULL) ? 'err' : ''; ?>"></textarea>
                 <div class="error"> <?php echo $messages['biography']?> </div>
 
             </label>
             <br/>
             <br/>
-            <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-fz152-agreement js-form-item-fz152-agreement checkbox">
             <label>
-                <input name="check" class="control-label option js-form-required form-required" type="checkbox" value="Значение 1" <?php echo ($values['check'] != NULL) ? 'checked' : ''; ?>> С контрактом ознакомлен(а).
+                <input name="check" type="checkbox" value="Значение 1" <?php echo ($values['check'] != NULL) ? 'checked' : ''; ?>> С контрактом ознакомлен(а).
                 <div class="error"> <?php echo $messages['check']?> </div>
             </label>
-            </div>
             <br/>
             <br/>
             <label>
