@@ -7,10 +7,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
     try {
         const response = await fetch('index.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
             body: formData,
         });
         
