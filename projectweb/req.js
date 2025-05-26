@@ -3,7 +3,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
     const form = e.target;
     const formData = new FormData(form);
     
-    // Если нажата кнопка выхода
+    
     const isLogout = e.submitter && e.submitter.name === 'logout_form';
     
     try {
@@ -24,7 +24,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
         }
         
         if (data.success) {
-            // Обработка успешной отправки
+            
             alert(data.messages.success);
             if (data.login && data.password) {
                 dinBlock.innerHTML = `
@@ -33,7 +33,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
                 `;
             }
         } else {
-            // Показ ошибок
+            
             for (const [field, message] of Object.entries(data.messages)) {
                 const errorElement = document.getElementById(`${field}-error`);
                 if (errorElement) {
