@@ -17,10 +17,10 @@ document.getElementById('form').addEventListener('submit', async function(e) {
             // Обработка успешной отправки
             alert(data.messages.success);
             if (data.login && data.password) {
-                dinBlock.innerHTML = '
-                    Логин: <strong>${data.login}</strong><br>
-                    Пароль: <strong>${data.password}</strong>
-                ';
+                dinBlock.innerHTML = `
+                Логин: <strong>${data.login}</strong><br>
+                Пароль: <strong>${data.password}</strong>
+                `;
             }
         } else {
             // Показ ошибок
