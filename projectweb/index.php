@@ -40,15 +40,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($_POST['logout_form'])) {
-        setcookie('fio_value', '', time() - 60*60*24*30);
-        setcookie('number_value', '', time() - 60*60*24*30);
-        setcookie('email_value', '', time() - 60*60*24*30);
-        setcookie('date_r_value', '', time() - 60*60*24*30);
-        setcookie('radio1_value', '', time() - 60*60*24*30);
-        setcookie('yaps_value', '', time() - 60*60*24*30);
-        setcookie('biography_value', '', time() - 60*60*24*30);
-        setcookie('check_value', '', time() - 60*60*24*30);
-        session_destroy();
+    // Удаляем все куки
+    $cookies = ['fio', 'number', 'email', 'date_r', 'radio1', 'yaps', 'biography', 'check'];
+    foreach ($cookies as $name) {
+        setcookie($name.'_value', '', time() - 3600);
+        setcookie($name.'_error', '', time() - 3600);
+    }
+    
+    // Уничтожаем сессию
+    session_unset();
+    session_destroy();
+    
+    // Возвращаем JSON для AJAX
+    if ($is_ajax) {
+        header('Content-Type: application/json');
+        echo json_encode(['redirect' => './']);
+        exit();
+    } else {
+        header('Location: ./');
+        exit();
+    }
+}
         
         if ($is_ajax) {
             $response['redirect'] = './';
