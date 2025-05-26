@@ -213,8 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Возвращаем ответ для AJAX
-    if ($is_ajax) {
+     if ($is_ajax) {
         header('Content-Type: application/json');
         echo json_encode($response);
         exit();
@@ -223,12 +222,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: index.php');
         exit();
     }
+} else {
     // Обработка GET-запроса (показать форму)
     if ($is_ajax) {
         header('Content-Type: application/json');
         echo json_encode(['error' => 'Invalid request method']);
         exit();
     }
+    
     
     // Старая логика отображения формы
     $fio = !empty($_COOKIE['fio_error']) ? $_COOKIE['fio_error'] : '';
