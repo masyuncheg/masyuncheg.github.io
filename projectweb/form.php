@@ -1122,8 +1122,8 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                <?php
           if($auth) echo '<button class="button edbut" type="submit">Изменить</button>';
           else echo '<button class="button" type="submit">Отправить</button>';
-          if($auth) echo '<button class="button" type="submit" name="logout_form">Выйти</button>'; 
-          else echo '<a class="btnlike" href="auth.php" name="logout_form">Войти</a>';
+          if($auth) echo '<button class="button" type="submit" name="logout_form" value="1">Выйти</button>'; 
+          else echo '<a class="btnlike" href="auth.php" name="login_form">Войти</a>';
         ?>
 
             </label>
