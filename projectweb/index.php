@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8');
 
 session_start();
 
@@ -9,12 +8,12 @@ $db = new PDO('mysql:host=localhost;dbname=u68787', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
 // Определяем тип запроса
-$$is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
-    && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+$$is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
 
 if ($is_ajax) {
     header('Content-Type: application/json; charset=UTF-8');
 } else header("Content-Type: text/html; charset=UTF-8");
+
 $accept_json = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false;
 
 $error = FALSE;
