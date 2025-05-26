@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 
 session_start();
 
@@ -8,12 +9,7 @@ $db = new PDO('mysql:host=localhost;dbname=u68787', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
 // Определяем тип запроса
-$is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
-
-if ($is_ajax) {
-    header('Content-Type: application/json; charset=UTF-8');
-} else header("Content-Type: text/html; charset=UTF-8");
-
+$is_ajax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 $accept_json = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false;
 
 $error = FALSE;
@@ -55,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         session_destroy();
         
         if ($is_ajax) {
-    
+            $response['redirect'] = './';
             header('Content-Type: application/json');
             echo json_encode($response);
             exit();
@@ -151,6 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($is_ajax) {
                     $response['success'] = true;
                     $response['messages']['success'] = 'Данные успешно обновлены';
+                    $response['profile_url'] = 'profile.php?id='.$_SESSION['form_id'];
                 } else {
                     setcookie('save', '1', time() + 60*60*24);
                 }
@@ -179,6 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $response['success'] = true;
                     $response['login'] = $login;
                     $response['password'] = $password;
+                    $response['profile_url'] = 'profile.php?id='.$form_id;
                     $response['messages']['success'] = 'Аккаунт успешно создан';
                 } else {
                     setcookie('login', $login, time() + 60*60*24*30);
