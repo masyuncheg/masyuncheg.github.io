@@ -1,16 +1,14 @@
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const form = e.target;
-     
+    const form = new e.target;
     
      const formData = new FormData(form);
 
     try {
         const response = await fetch('index.php', {
             method: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'},
-            body: formData
+            headers: {'X-Requested-With': 'XMLHttpRequest'},
+            body: formData,
         });
         
         const data = await response.json();
@@ -19,7 +17,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
             // Обработка успешной отправки
             alert(data.messages.success);
             if (data.login && data.password) {
-                 
+                console.log(`Login: ${data.login}, Password: ${data.password}`);
             }
             }
         } else {
