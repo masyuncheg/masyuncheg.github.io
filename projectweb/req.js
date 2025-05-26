@@ -11,7 +11,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
                 'Content-Type': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
             },
-            body: JSON.stringify(formData)
+            body: formData;
         });
         
         const data = await response.json();
