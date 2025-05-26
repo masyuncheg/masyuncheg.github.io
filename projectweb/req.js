@@ -2,6 +2,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    const dinBlock = document.querySelector('.din');
     
     
     const isLogout = e.submitter && e.submitter.name === 'logout_form';
