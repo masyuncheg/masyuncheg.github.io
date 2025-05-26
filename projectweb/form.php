@@ -1087,7 +1087,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
             <label>
                 Выберите любимый язык программирования:
                 <br/>
-            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple">
+            <select name="yaps[]" class="<?php echo ($errors['yaps'] != NULL) ? 'err' : ''; ?>" multiple="multiple" multiple required>
                 <option value="Pascal" <?php echo (in_array('Pascal', $yapses)) ? 'selected' : ''; ?>>Pascal</option>
                 <option value="C" <?php echo (in_array('C', $yapses)) ? 'selected' : ''; ?>>C</option>
                 <option value="C++"<?php echo (in_array('C++', $yapses)) ? 'selected' : ''; ?>>C++</option>
@@ -1099,7 +1099,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
                 <option value="Prolog" <?php echo (in_array('Prolog', $yapses)) ? 'selected' : ''; ?>>Prolog</option>
                 <option value="Scala" <?php echo (in_array('Scala', $yapses)) ? 'selected' : ''; ?>>Scala</option>
             </select>
-            <div class="error" id="yaps[]-error"> <?php echo $messages['yaps']?> </div>
+            <div class="error" id="yaps-error"> <?php echo $messages['yaps']?> </div>
             </label>
             <br/>
             <br/>
